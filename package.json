@@ -1,0 +1,26 @@
+{
+  "name": "sweet-style",
+  "version": "0.0.3",
+  "description": "Sweet UI v2.0 style module, base scss",
+  "main": "index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sweet",
+    "sweetui",
+    "style",
+    "css",
+    "scss"
+  ],
+  "publishConfig": {
+    "scope": "geely",
+    "registry": "http://10.200.188.161:8081/repository/npm-geely/"
+  },
+  "author": "SweetUI Group",
+  "license": "MIT",
+  "dependencies": {
+    "element-ui": "^2.0.5",
+    "vue": "^2.5.6"
+  }
+}
