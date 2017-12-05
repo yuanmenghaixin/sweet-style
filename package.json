@@ -13,10 +13,6 @@
     "css",
     "scss"
   ],
-  "publishConfig": {
-    "scope": "geely",
-    "registry": "http://10.200.188.161:8081/repository/npm-geely/"
-  },
   "author": "SweetUI Group",
   "license": "MIT",
   "dependencies": {
