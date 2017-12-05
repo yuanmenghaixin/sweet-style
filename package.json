@@ -16,7 +16,7 @@
   "author": "SweetUI Group",
   "license": "MIT",
   "dependencies": {
-    "element-ui": "^2.0.5",
-    "vue": "^2.5.6"
+    "element-ui": "^2.0.7",
+    "vue": "^2.5.9"
   }
 }
