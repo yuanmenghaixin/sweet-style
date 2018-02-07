@@ -1,12 +1,18 @@
 {
     "name": "@sweetui/sweet-style",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Sweet UI v2.0 style module, base scss",
     "main": "index.scss",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "keywords": ["sweet", "sweetui", "style", "css", "scss"],
+    "keywords": [
+        "sweet",
+        "sweetui",
+        "style",
+        "css",
+        "scss"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/sweetui/sweet-style.git"
@@ -14,7 +20,7 @@
     "author": "SweetUI Group",
     "license": "MIT",
     "dependencies": {
-        "element-ui": "^2.0.7",
+        "element-ui": "^2.1.0",
         "vue": "^2.5.9"
     }
 }
