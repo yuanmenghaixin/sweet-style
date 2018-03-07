@@ -1,0 +1,18 @@
+.el-table thead {
+    color: $--color-gray-light-1;
+}
+
+.el-table th {
+    padding: 8px 0;
+}
+
+.el-table td {
+    padding: 6px 0;
+}
+
+.el-table {
+    .cell {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}

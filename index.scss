@@ -1,3 +1,9 @@
-@import "~element-ui/packages/theme-chalk/src/index";
+// 引入主题包
+@import "./themes/1.x/index.scss";
+
+// 引入sweet样式（待合并）
 @import "./lib/sweet.cell.scss";
 @import "./lib/sweet.spacing.scss";
+
+// 引入element-ui (样式)
+@import "~element-ui/packages/theme-chalk/src/index";

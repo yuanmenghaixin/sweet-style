@@ -1,0 +1,34 @@
+.el-badge__content.is-dot {
+    width: 4px;
+    height: 4px;
+}
+
+.emblem-primary {
+    .el-badge__content {
+        background: $--color-primary;
+    }
+}
+
+.emblem-danger {
+    .el-badge__content {
+        background: $--color-danger;
+    }
+}
+
+.emblem-warning {
+    .el-badge__content {
+        background: $--color-warning;
+    }
+}
+
+.emblem-success {
+    .el-badge__content {
+        background: $--color-success;
+    }
+}
+
+.emblem-stop {
+    .el-badge__content {
+        background: $--color-gray;
+    }
+}
