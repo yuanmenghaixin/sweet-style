@@ -1,4 +1,8 @@
-// sweet-theme主题包1.0
+// 本地测试，先引入config.scss
+// @import "./config.scss";
+
+// 引入element-ui (样式)
+@import "~element-ui/packages/theme-chalk/src/index";
 
 // icon 在线地址引入
 // sweet 异常页面
@@ -8,7 +12,7 @@
 // sweet 线性图标
 @import url("//at.alicdn.com/t/font_537911_r8pb29w8t4sd1jor.css");
 
-@import 'config.scss';
+// 复写
 @import 'common.scss';
 @import "./font.scss";
 @import "./breadcrumb.scss";
@@ -24,4 +28,6 @@
 @import "./tab.scss";
 @import "./global-tips.scss";
 @import "./progress.scss";
+
+
 

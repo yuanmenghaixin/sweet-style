@@ -28,6 +28,9 @@
             color: $--color-white;
         }
     }
+    .el-pager li.active + li {
+        border-left: 1px solid $--color-gray-light-9;
+    }
 }
 
 .el-pagination--small {

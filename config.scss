@@ -1,3 +1,4 @@
-@import '~element-ui/packages/theme-chalk/src/common/var.scss';
-@import './var.scss';
 @import './mixins/index.scss';
+
+// 引入主题包变量配置表
+@import './themes/1.x/config.scss';
