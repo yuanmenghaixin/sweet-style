@@ -1,6 +1,6 @@
 {
     "name": "@sweetui/sweet-style",
-    "version": "0.2.8",
+    "version": "0.2.9",
     "description": "Sweet UI v2.0 style module, base scss",
     "main": "index.scss",
     "scripts": {
@@ -18,9 +18,5 @@
         "url": "https://github.com/sweetui/sweet-style.git"
     },
     "author": "SweetUI Group",
-    "license": "MIT",
-    "dependencies": {
-        "element-ui": "^2.1.0",
-        "vue": "^2.5.9"
-    }
+    "license": "MIT"
 }
