@@ -1,4 +1,6 @@
 .el-pagination {
+    margin: 24px;
+    padding: 0;
     &:after {
         content: '';
         display: block;
@@ -13,23 +15,51 @@
     .el-pagination__sizes {
         float: left;
     }
-    .number {
+    .el-pager li.number {
         background-color: $--color-white;
         color: $--color-gray-light-1;
-        border-radius: 3px;
+        border-radius: $--pagination-border-radius;
         border: 1px solid $--color-gray-light-9;
         margin: 0 4px;
         font-weight: normal;
-        min-width: 30px;
-        height: 30px;
+        min-width: $--pagination-button-width;
+        height: $--pagination-button-height;
         font-size: 14px;
+        transition: border .3s;
         &.active {
             background-color: $--color-primary;
             color: $--color-white;
+            border-color: $--color-primary;
+        }
+        &:hover {
+            border-color: $--color-primary;
+        }
+    }
+    &--small {
+        .number.active {
+            border-color: $--color-primary;
         }
     }
     .el-pager li.active + li {
         border-left: 1px solid $--color-gray-light-9;
+    }
+    .btn-next, .btn-prev {
+        border: 1px solid $--color-gray-light-9;
+        padding: 0;
+        margin: 0 4px;
+        border-radius: $--pagination-border-radius;
+        transition: border .3s;
+        &:not(.disabled):hover {
+            border-color: $--color-primary;
+        }
+    }
+    .el-select {
+        .el-input__inner {
+            text-align: left;
+        }
+        .el-input {
+            width: 80px;
+        }
     }
 }
 
@@ -58,11 +88,11 @@
     .el-pager .more::before {
         line-height: 22px;
     }
-    .number {
+    .el-pager li.number {
         background-color: $--color-white;
         color: $--color-gray-light-1;
         border-radius: 3px;
-        border: 1px solid $--color-gray-light-9 !important;
+        border: 1px solid $--color-gray-light-9;
         margin: 0 4px;
         font-weight: normal;
         min-width: 22px;
@@ -71,6 +101,7 @@
         &.active {
             background-color: $--color-primary;
             color: $--color-white;
+            border-color: $--color-primary;
         }
     }
     .el-input__inner {

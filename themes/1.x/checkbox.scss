@@ -1,0 +1,23 @@
+.el-checkbox__input {
+		height: $--checkbox-input-height;
+}
+
+.el-checkbox__label {
+    padding-left: $--space-small;
+}
+
+.el-checkbox + .el-checkbox {
+		margin-left: $--space-base;
+}
+
+.el-checkbox + .el-radio {
+		margin-left: $--space-base;
+}
+
+.el-checkbox {
+	&:not(.is-disabled):hover {
+		.el-checkbox__inner {
+			border-color: $--color-primary;
+		}
+	}
+}

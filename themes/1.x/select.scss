@@ -1,0 +1,132 @@
+// select 选择器
+.el-select-dropdown.el-popper {
+    .popper__arrow {
+        display: none;
+    }
+}
+
+.el-cascader-menus.el-popper {
+    .popper__arrow {
+        display: none;
+    }
+}
+
+.el-popper[x-placement^="bottom"] {
+    margin-top: 4px;
+}
+
+.el-popper[x-placement^="top"] {
+    margin-bottom: 4px;
+}
+
+.el-select-dropdown__item.selected {
+    font-weight: normal;
+}
+
+.el-select-dropdown {
+    .el-select-dropdown__item {
+        height: 30px;
+        line-height: 30px;
+        span {
+            line-height: 30px !important;
+        }
+    }
+}
+
+.el-select {
+    .el-input {
+        .el-input__inner {
+            height: 30px;
+            font-size: 12px;
+        }
+    }
+    .el-input--medium {
+        .el-input__inner {
+            height: 26px;
+        }
+    }
+    .el-input--small {
+        .el-input__inner {
+            height: 28px;
+        }
+    }
+    .el-input--mini {
+        .el-input__inner {
+            height: 26px;
+        }
+    }
+    .el-select__tags {
+        .el-tag {
+            background-color: $--color-primary-light-10;
+            color: $--color-gray-light-1;
+            .el-tag__close.el-icon-close {
+                position: relative;
+                right: -6px;
+                top: -1px;
+                width: 16px;
+                height: 16px;
+                line-height: 16px;
+                font-size: 22px;
+                color: $--color-gray-light-1;
+                text-align: center;
+                vertical-align: middle;
+                border-radius: 0;
+                background-color: $--color-primary-light-10;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// 级联选择器
+.el-cascader {
+    line-height: 30px;
+    .el-input {
+        .el-input__inner {
+            height: 30px;
+        }
+    }
+    .el-cascader__label {
+        font-size: 12px;
+        line-height: 30px;
+    }
+}
+
+.el-cascader--medium {
+    line-height: 30px;
+    .el-input--medium {
+        .el-input__inner {
+            height: 30px;
+        }
+    }
+    .el-cascader__label {
+        font-size: 12px;
+        line-height: 30px;
+    }
+}
+
+.el-cascader--small {
+    line-height: 28px;
+    .el-input--small {
+        .el-input__inner {
+            height: 28px;
+        }
+    }
+    .el-cascader__label {
+        font-size: 12px;
+        line-height: 28px;
+    }
+}
+
+.el-cascader--mini {
+    line-height: 26px;
+    .el-input--mini {
+        .el-input__inner {
+            height: 26px;
+        }
+    }
+    .el-cascader__label {
+        font-size: 12px;
+        line-height: 26px;
+    }
+}

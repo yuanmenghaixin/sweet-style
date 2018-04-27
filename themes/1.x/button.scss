@@ -1,0 +1,24 @@
+.el-button {
+    &--default {
+        &:hover {
+            background-color: inherit;
+        }
+        &.el-button--primary {
+            &:hover {
+                background-color: #5488c3;
+            }
+        }
+    }
+    &.is-disabled {
+        border: 1px solid $--color-gray-light-8;
+        background-color: white;
+        color: $--color-gray-light-7;
+        &:hover,
+        &:active,
+        &:focus {
+            border: 1px solid $--color-gray-light-8;
+            background-color: white;
+            color: $--color-gray-light-7;
+        }
+    }
+}

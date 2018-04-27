@@ -1,0 +1,14 @@
+.el-button + .el-button, .el-dropdown + .el-dropdown, .el-button + .el-dropdown {
+	margin-left: $--space-small - $--space-inline-block;
+}
+.el-button-group {
+	.el-button + .el-button, .el-dropdown + .el-dropdown, .el-button + .el-dropdown {
+		margin-left: 0;
+	}
+	.el-button + .el-dropdown {
+		.el-button {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+}

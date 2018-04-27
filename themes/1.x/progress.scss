@@ -1,3 +1,14 @@
+.el-progress {
+    .el-progress-bar__outer {
+        height: 8px !important;
+    }
+    &.el-progress--small {
+        .el-progress-bar__outer {
+            height: 4px !important;
+        }
+    }
+}
+
 .is-exception {
     i.el-icon-circle-cross:before {
         content: '\E62C';

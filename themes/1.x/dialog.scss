@@ -1,0 +1,98 @@
+.el-dialog {
+    padding: 0 24px;
+    .el-dialog__header {
+        line-height: 21px;
+        height: 21px;
+        padding: 16px 0;
+        border-bottom: 2px solid #8B919A;
+        font-size: 14px;
+        position: relative;
+
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+    .el-dialog__body {
+        border-bottom: 2px solid #8B919A;
+        padding: 24px 0;
+    }
+    .el-dialog__footer {
+        padding: 16px 0;
+    }
+    .el-dialog__title {
+        font-size: 14px;
+    }
+    .el-dialog__headerbtn {
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+    }
+    &--mini {
+        .el-dialog__header {
+            height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            display: none;
+        }
+        .el-dialog__body {
+            padding: 40px 40px 0 40px;
+            border: 0;
+            .demo-base-dialog-title {
+                margin: 0 0 8px 0;
+                line-height: 24px;
+                height: 24px;
+                font-size: 14px;
+                font-weight: bold;
+                i {
+                    margin-right: 16px;
+                    font-size: 24px;
+                    vertical-align: middle;
+                    color: #EB9600;
+                }
+            }
+            .demo-base-dialog-content {
+                margin: 0;
+                line-height: 18px;
+                padding-left: 44px;
+            }
+        }
+        .el-dialog__footer {
+            padding: 40px;
+        }
+    }
+}
+
+.el-dialog--other {
+    text-align: center;
+    .el-dialog {
+        padding: 0;
+        display: inline-block;
+        text-align: left;
+        width: auto;
+        &__header {
+            background: $--color-primary;
+            border: 1px solid $--color-primary;
+            padding: 11px 24px;
+            &, span, p, i {
+                color: white;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+        &__headerbtn {
+            right: 24px;
+        }
+        &__body, &__footer {
+            padding: 16px 24px;
+        }
+        &__body {
+            border-bottom:1px solid $--color-gray-light-8;
+        }
+    }
+    &.is-smaller {
+        .el-dialog__header {
+            padding: 16px 24px;
+        }
+    }
+}

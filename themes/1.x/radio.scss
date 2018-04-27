@@ -1,14 +1,33 @@
-.el-radio__input.is-checked {
-    .el-radio__inner {
-        background-color: $--color-white;
-        &:after {
-            width: 6px;
-            height: 6px;
-            background-color: $--color-primary;
+.el-radio__input {
+		height: $--radio-input-height;
+    &.is-checked {
+        .el-radio__inner {
+            background-color: $--color-white;
+            &:after {
+                width: 6px;
+                height: 6px;
+                background-color: $--color-primary;
+            }
         }
     }
 }
 
 .el-radio__label {
-    padding-left: 8px;
+    padding-left: $--space-small;
+}
+
+.el-radio + .el-radio {
+		margin-left: $--space-base;
+}
+
+.el-radio + .el-checkbox {
+		margin-left: $--space-base;
+}
+
+.el-radio {
+    &:not(.is-disabled):hover {
+        .el-radio__inner {
+            border-color: $--color-primary;
+        }
+    }
 }

@@ -1,5 +1,5 @@
 // 本地测试，先引入config.scss
-// @import "./config.scss";
+@import "./config.scss";
 
 // 引入element-ui (样式)
 @import "~element-ui/packages/theme-chalk/src/index";
@@ -8,18 +8,21 @@
 // sweet 异常页面
 @import url("//at.alicdn.com/t/font_558973_7iu2igugq3434n29.css");
 // sweet 实心图标
-@import url("//at.alicdn.com/t/font_558953_y8rpediyvte29.css");
+@import url("//at.alicdn.com/t/font_558953_0vidsad365iv0a4i.css");
 // sweet 线性图标
-@import url("//at.alicdn.com/t/font_537911_r8pb29w8t4sd1jor.css");
+@import url("//at.alicdn.com/t/font_537911_qubb7r9henuerk9.css");
 
 // 复写
-@import 'common.scss';
+@import './common.scss';
+@import './offset.scss';
 @import "./font.scss";
 @import "./breadcrumb.scss";
+@import "./button.scss";
 @import "./navigation.scss";
 @import "./paginations.scss";
 @import "./steps.scss";
 @import "./radio.scss";
+@import "./checkbox.scss";
 @import "./input.scss";
 @import "./form.scss";
 @import "./emblem.scss";
@@ -28,6 +31,14 @@
 @import "./tab.scss";
 @import "./global-tips.scss";
 @import "./progress.scss";
+@import "./select.scss";
+@import "./message.scss";
+@import "./dialog.scss";
+@import "./dropdown.scss";
+@import "./loading.scss";
+@import "./tree.scss";
+@import "./alert.scss";
+@import "./upload.scss";
 
 
 

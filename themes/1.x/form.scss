@@ -8,3 +8,18 @@
     box-sizing: border-box;
     padding: 16px;
 }
+
+.el-form--label-top {
+	.el-form-item__label {
+		line-height: 18px;
+		padding-bottom: 8px;
+	}
+}
+
+.sw-form {
+	&--advanced {
+		.el-select, input, textarea {
+			width: 100%;
+		}
+	}
+}

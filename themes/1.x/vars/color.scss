@@ -1,3 +1,9 @@
+// 基础
+$--disabled-fill-base: #f5f5f5;
+$--color-text-base: #515152;
+$--color-text-regular: #515152;
+$--border-color-base: #dedede;
+
 // 基础色
 $--color-primary-light-10: #E9F0F7;
 $--color-primary-light-9: #CADAEC;
@@ -163,12 +169,10 @@ $--color-info: $--color-gray-light-6;
 $--color-dark-gray: $--color-dark-gray-light-6;
 $--color-light-gray: $--color-light-gray-light-6;
 $--color-gray: $--color-gray-light-6;
-$--color-white: #FFFFFF;
+$--color-white: white;
 
 $background-color-blue: $--color-primary;
 $background-color-deep-blue: $--color-primary-light-4;
 $background-color-gray: $--color-gray-light-9;
 $background-color-white: $--color-white;
-$font-color-white: $--color-white;
-$font-color-gray: rgba(255, 255, 255, .7);
 $border-color: $--color-gray-light-1;

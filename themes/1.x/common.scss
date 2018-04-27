@@ -1,12 +1,18 @@
 @import './vars/index.scss';
 
-html, body, #app {
+html,
+body,
+#app {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+    -webkit-font-smoothing: antialiased;
     font-size: 14px;
     color: #515152;
+}
+html {
+    min-width: 1280px;
 }
 
 .clearfix:after {
@@ -21,8 +27,30 @@ blockquote {
     margin-left: 0;
     margin-right: 0;
     padding: 24px;
-    border-left: 4px solid #E9F0F7;
+    border-left: 2px solid #EBF0F5;
     background: $--color-light-gray-light-7;
+
+    &.success, &.error {
+        padding: 50px 24px;
+        border-bottom: 5px solid #EBF0F5;
+        border-left: 0;
+    }
+
+    &.success {
+        border-color: $--color-success;
+    }
+    &.error {
+        border-color: $--color-danger;
+    }
+}
+
+.example-text {
+    & > span {
+        font-size: 14px;
+        color: $--color-gray-light-1;
+    }
+    color: $--color-gray-light-4;
+    font-size: 12px;
 }
 
 code.code {
@@ -32,4 +60,24 @@ code.code {
     display: inline-block;
     padding: 1px 5px;
     border-radius: 3px;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: $--color-gray-light-7 !important;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: $--color-gray-light-7 !important;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: $--color-gray-light-7 !important;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: $--color-gray-light-7 !important;
 }

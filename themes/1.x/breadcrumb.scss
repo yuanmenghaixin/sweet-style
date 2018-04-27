@@ -3,4 +3,18 @@
         font-weight: normal;
         color: $--color-primary;
     }
+    &.is-disabled {
+    	.el-breadcrumb__item {
+		    &:not([aria-current="page"]) {
+					.el-breadcrumb__inner {
+			    	color: $--color-gray-light-4;
+			    	cursor: auto;
+			    	&:hover {
+			    		color: $--color-gray-light-4;
+			    	}
+			    }
+		    }
+    	}
+    }
+
 }
