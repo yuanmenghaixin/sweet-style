@@ -25,7 +25,17 @@
             line-height: 40px;
         }
     }
-
+    &-icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+        width: 24px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1;
+        font-weight: normal;
+        font-variant: normal;
+    }
     // 浅色主题
     &.light-theme {
         .el-menu-item {
@@ -138,6 +148,9 @@
     // 导航收起状态
     &.el-menu--collapse {
         width: 64px;
+        & > .el-submenu > .el-submenu__title i.el-menu-icon {
+            margin: 0;
+        }
         .el-submenu > .el-submenu__title {
             padding-left: 20px !important;
         }
