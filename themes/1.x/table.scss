@@ -1,5 +1,9 @@
 .el-table thead {
     color: $--color-gray-light-1;
+    th.is-leaf {
+        border-top: $--table-border;
+        border-bottom-width: 2px;
+    }
 }
 
 .el-table th {
@@ -11,6 +15,21 @@
 }
 
 .el-table {
+    font-size: 12px;
+    &[sw-stripe] {
+        tbody {
+            tr:nth-child(2n - 1) {
+                &:hover {
+                    td {
+                        background: $--table-row-hover-background;
+                    }
+                }
+                td {
+                    background: #F9FAFB;
+                }
+            }
+        }
+    }
     .cell {
         padding-left: 8px;
         padding-right: 8px;

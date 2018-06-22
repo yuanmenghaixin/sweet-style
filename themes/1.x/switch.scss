@@ -1,0 +1,18 @@
+.el-switch {
+	&[size="mini"] {
+		height: $--switch-mini-height;
+		.el-switch__core {
+			height: $--switch-mini-height;
+			width: $--switch-mini-width !important;
+			&:after {
+				width: calc(#{$--switch-mini-height} - 4px);
+				height: calc(#{$--switch-mini-height} - 4px);
+			}
+		}
+		&.is-checked {
+			.el-switch__core:after {
+				margin-left: calc(-17px + 4px);
+			}
+		}
+	}
+}

@@ -1,6 +1,6 @@
 {
     "name": "@sweetui/sweet-style",
-    "version": "0.3.33",
+    "version": "0.4.0-beta",
     "description": "Sweet UI v2.0 style module, base scss",
     "main": "index.scss",
     "scripts": {
