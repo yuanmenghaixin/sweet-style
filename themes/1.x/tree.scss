@@ -1,10 +1,18 @@
-.el-tree-node__content {
-    height: 30px;
-    font-size: 12px;
-    & > .el-tree-node__expand-icon {
-    	padding-right: 8px;
-    }
-    .el-tree-node__label {
-    	font-size: 12px;
-    }
+.el-tree-node {
+	&__content {
+	    height: 30px;
+	    font-size: 12px;
+	    &:hover {
+	    	background-color: nth($--color-primary-maps, 1);
+	    }
+	    & > .el-tree-node__expand-icon {
+	    	padding-right: 8px;
+	    }
+	    .el-tree-node__label {
+	    	font-size: 12px;
+	    }
+	}
+	&:focus > .el-tree-node__content {
+		background-color: nth($--color-primary-maps, 1);
+	}
 }

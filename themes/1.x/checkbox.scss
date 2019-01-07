@@ -21,3 +21,12 @@
 		}
 	}
 }
+
+.el-checkbox, .el-radio {
+	&.is-bordered {
+		line-height: 1;
+		&.is-checked {
+			border: $--border-base;
+		}
+	}
+}

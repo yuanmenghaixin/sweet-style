@@ -1,95 +1,33 @@
-/*
-函数定义
- */
-$--arr-sizes: (12, 14, 16, 18, 20, 22, 24, 26, 28, 30);
+@import './vars/mixin.scss';
 
-@mixin font() {
-    @each $font-size in $--arr-sizes {
-        .font-#{$font-size} {
-            font-size: #{$font-size}px;
-            line-height: #{1.5 * $font-size}px;
-            color: #515152;
-        }
-    }
-}
-
-@mixin font-weight($font-weight: blod) {
-    font-weight: $font-weight;
-}
-
-@mixin color($color: #515152) {
-    color: $color;
-}
-
-/*
-实现
- */
+/* 生成各种字号
+-------------------------- */
 @include font();
 
-.font-w-100 {
-    @include font-weight(100)
+
+/* 生成各种粗细字体
+-------------------------- */
+@include font-weight();
+
+/* 生成常用的字体颜色
+-------------------------- */
+@include color-commons();
+
+/* 常用文字样式
+-------------------------- */
+.title {
+    color: $--color-text-primary;
+}
+.sub-title {
+    color: $--color-text-secondary;
 }
 
-.font-w-200 {
-    @include font-weight(200)
-}
-
-.font-w-300 {
-    @include font-weight(300)
-}
-
-.font-w-400 {
-    @include font-weight(400)
-}
-
-.font-w-500 {
-    @include font-weight(500)
-}
-
-.font-w-600 {
-    @include font-weight(600)
-}
-
-.font-w-700 {
-    @include font-weight(700)
-}
-
-.font-w-800 {
-    @include font-weight(800)
-}
-
-.font-w-900 {
-    @include font-weight(900)
-}
-
-.font-c-blue, .font-c-primary {
-    @include color($--color-primary)
-}
-
-.font-c-green, .font-c-success {
-    @include color($--color-success)
-}
-
-.font-c-danger {
-    @include color($--color-danger)
-}
-
-.font-c-warning {
-    @include color($--color-warning)
-}
-
-.font-c-info {
-    @include color($--color-info)
-}
-
-.font-c-white {
-    @include color(#FFFFFF)
-}
-
+// 输入框颜色
 .font-c-gray-shallow-1 {
     @include color(#CBCBCB)
 }
 
+// 注释类颜色
 .font-c-gray-deep-1 {
     @include color(#8e8e8f)
 }

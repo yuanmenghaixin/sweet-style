@@ -1,0 +1,67 @@
+/*
+ * =====================================
+ * name    : quick-style
+ * version : v1.0.0
+ * time    : 2018-10-06 13:44:43
+ * auth    : huyingjun
+ * e-mail  : yingjun.hu@geely.com
+ * =====================================
+ */
+
+$i: 0;
+$max: 30;
+$offset: 2;
+$orients: ['', '-t', '-r', '-b', '-l'];
+
+@mixin arounds($i) {
+		@each $orient in $orients {
+        .p#{$orient}-#{$offset*$i} {
+        		@if $orient == '' {
+        			padding: #{$offset*$i}px;
+        		}
+
+ 		        @if $orient == '-t' {
+		        	padding-top: #{$offset*$i}px;
+		        }
+
+		        @if $orient == '-r' {
+		        	padding-right: #{$offset*$i}px;
+		        }
+
+		        @if $orient == '-b' {
+		        	padding-bottom: #{$offset*$i}px;
+		        }
+
+		        @if $orient == '-l' {
+		        	padding-left: #{$offset*$i}px;
+		        }
+		    }
+
+		    .m#{$orient}-#{$offset*$i} {
+		    		@if $orient == '' {
+        			margin: #{$offset*$i}px;
+        		}
+
+		        @if $orient == '-t' {
+		        	margin-top: #{$offset*$i}px;
+		        }
+
+		        @if $orient == '-r' {
+		        	margin-right: #{$offset*$i}px;
+		        }
+
+		        @if $orient == '-b' {
+		        	margin-bottom: #{$offset*$i}px;
+		        }
+
+		        @if $orient == '-l' {
+		        	margin-left: #{$offset*$i}px;
+		        }
+		    }
+    }
+}
+
+@while $i < $max {
+    @include arounds($i);
+    $i: $i + 1;
+}

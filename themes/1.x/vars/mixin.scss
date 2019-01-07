@@ -1,0 +1,53 @@
+// 暗色调的透明度
+$--dark-color-opacitys: [.85, .75, .45, .25, .15, .8, .4, .2];
+// 亮色调的透明度
+$--light-color-opacitys: [1, .85, .75, .45, .25, .15, .8];
+// 字号数组
+$--arr-sizes: (12, 14, 16, 18, 20, 22, 24, 26, 28, 30);
+// 字体粗细
+$--arr-weights: [100, 200, 300, 400, 500, 600, 700, 800, 900];
+// 常用颜色类型
+$--arr-color-commons: (primary: $--color-primary, success: $--color-success, info: $--color-info, danger: $--color-danger, warning: $--color-warning);
+
+// 生成字号class
+@mixin font() {
+    @each $font-size in $--arr-sizes {
+        .font-#{$font-size} {
+            font-size: #{$font-size}px;
+            line-height: #{1.5 * $font-size}px;
+            color: $--color-text-primary;
+        }
+    }
+}
+
+// 生成字体粗细
+@mixin font-weight($font-weight: blod) {
+    @each $w in $--arr-weights {
+    	.font-w-#{$w} {
+    		font-weight: $w;
+    	}
+    }
+}
+
+// 生成颜色
+@mixin color($color: #{$--color-text-primary}) {
+    color: $color;
+}
+
+// 生成颜色带透明度
+@mixin color-opacitys($color, $isDark: true) {
+	@if $isDark == true {
+		@each $c in $--dark-color-opacitys {
+			color: opacify($color, $c);
+		}
+	}
+}
+
+// 生成通用颜色
+@mixin color-commons() {
+	@each $t, $c in $--arr-color-commons {
+		.color-#{$t} {
+			color: $c;
+		}
+	}
+}

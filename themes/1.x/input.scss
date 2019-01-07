@@ -1,20 +1,60 @@
-.el-input__inner, .el-textarea__inner {
+@mixin inputCommon() {
     padding: 0 8px;
+    font-size: $--input-font-size;
+
     &:hover {
         border-color: $--color-primary;
     }
+
+    &::-webkit-input-placeholder {
+        color: $--color-text-placeholder !important;
+    }
+    &:-moz-placeholder {
+        color: $--color-text-placeholder !important;
+    }
+    &::-moz-placeholder {
+        color: $--color-text-placeholder !important;
+    }
+    &:-ms-input-placeholder {
+        color: $--color-text-placeholder !important;
+    }
 }
-.el-input__icon {
-	&.iconfont {
-		font-size: inherit;
-		display: inline-block;
-	}
+
+.el-input {
+    &__inner {
+        @include inputCommon();
+    }
+
+    &__icon {
+        &.iconfont {
+            font-size: inherit;
+            display: inline-block;
+        }
+    }
+
+    &--large {
+        font-size: $--input-large-font-size;
+
+        .el-input__inner {
+            height: $--input-large-height;
+        }
+    }
+    .el-input-group__append, .el-input-group__prepend {
+        color: nth($--color-text-dark-maps, 2);
+    }
+}
+
+.el-textarea {
+    &__inner {
+        @include inputCommon();
+    }
 }
 
 .sw-input-btn {
-	&--mix {
-		.el-input, .el-button {
-			vertical-align: top;
-		}
-	}
+    &--mix {
+        .el-input,
+        .el-button {
+            vertical-align: top;
+        }
+    }
 }

@@ -1,0 +1,10 @@
+.el-range-editor {
+	.el-range__icon, .el-range-separator {
+		line-height: 22px;
+	}
+	&--small {
+		.el-range__icon, .el-range-separator {
+			line-height: 14px;
+		}
+	}
+}

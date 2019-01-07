@@ -1,0 +1,9 @@
+$--alert-success-color: nth($--color-success-maps, 1) !default;
+$--alert-danger-color: nth($--color-danger-maps, 1) !default;
+$--alert-info-color: nth($--color-primary-maps, 1) !default;
+$--alert-warning-color: nth($--color-warning-maps, 1) !default;
+
+$--alert-success-border: 1px solid nth($--color-success-maps, 2) !default;
+$--alert-danger-border: 1px solid nth($--color-danger-maps, 2) !default;
+$--alert-info-border: 1px solid nth($--color-primary-maps, 2) !default;
+$--alert-warning-border: 1px solid nth($--color-warning-maps, 2) !default;

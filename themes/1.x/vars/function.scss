@@ -1,0 +1,62 @@
+$--color-offset: 9%;             // 色阶差值
+$--color-offset-number: 11;      // 色阶个数
+
+$--color-text-dark-offsets: [.15, .25, .55, .75, .85, .92, .96, .98];
+$--color-text-light-offsets: [0, .15, .25, .55, .75, .85, .92];
+
+
+// 生成色卡颜色
+@function build-color($color, $mount, $type: white) {
+		@if $type == white {
+			@return mix($--color-white, $color, $mount);
+		} @else {
+			@return mix($--color-black, $color, $mount);
+		}
+}
+
+// 生成主色调色卡
+@function generateColors($color) {
+	// 初始化参数
+	$list: ();
+	$--type: white;
+	$--mount: 9%;
+
+	@for $c from 1 through 2 {
+		@if $c == 2 {
+			$--color-offset-number: 10;
+		}
+		@for $i from 1 through $--color-offset-number {
+			@if $c == 1 {
+				$--type: white;
+				$--mount: $--color-offset * ($--color-offset-number - $i);
+			} @else {
+				$--type: black;
+				$--mount: $--color-offset * $i;
+			}
+			$str: build-color($color, $--mount, $--type);
+			$list: append($list, $str);
+		}
+	}
+	@return $list;
+}
+
+// 生成文字颜色色卡
+@function generateTextColors($type: dark) {
+	$list: [];
+	$result: [];
+	$color: $--color-black;
+	@if ($type == dark) {
+		$list: $--color-text-dark-offsets;
+		$color: $--color-black;
+	} @else {
+		$list: $--color-text-light-offsets;
+		$color: $--color-white;
+	}
+
+	@each $offset in $list {
+      $str: transparentize($color, $offset);
+      $result: append($result, $str);
+  }
+
+  @return $result;
+}

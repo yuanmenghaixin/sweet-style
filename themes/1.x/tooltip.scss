@@ -1,8 +1,9 @@
-// .el-tooltip__popper.is-dark {
-//     background: rgba(64, 64, 64, .85);
-//     .popper__arrow {
-//     	&:after {
-//     		border-top-color: rgba(64, 64, 64, .85) !important;
-//     	}
-//     }
-// }
+.el-tooltip__popper.is-dark {
+    background: nth($--color-text-dark-maps, 2);
+    color: white;
+    .popper__arrow {
+    	&:after {
+    		border-top-color: nth($--color-text-dark-maps, 2) !important;
+    	}
+    }
+}

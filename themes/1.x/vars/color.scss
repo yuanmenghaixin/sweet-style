@@ -1,15 +1,86 @@
-// 基础
-$--disabled-fill-base: #f5f5f5 !default;
-$--color-text-base: #515152 !default;
-$--color-text-regular: #515152 !default;
-$--border-color-base: #dedede !default;
+@import './function.scss';
 
-// 基础色
+/* 基础变量
+-------------------------- */
+$--color-black: rgba(0,0,0,1) !default;
+$--color-white: rgba(255,255,255,1) !default;
+
+$--color-dark1: transparentize($--color-black, .15) !default; // 85% 主标题文字颜色
+$--color-dark2: transparentize($--color-black, .25) !default; // 75% 主要文字颜色
+$--color-dark3: transparentize($--color-black, .55) !default; // 45% 次要文字颜色
+$--color-dark4: transparentize($--color-black, .75) !default; // 25% 禁止颜色
+$--color-dark5: transparentize($--color-black, .85) !default; // 15% 边框颜色
+$--color-dark6: transparentize($--color-black, .92) !default; // 8% 失效背景色
+$--color-dark7: transparentize($--color-black, .96) !default; // 4% 背景颜色01
+$--color-dark8: transparentize($--color-black, .98) !default; // 2% 表头颜色02
+
+$--color-light1: transparentize($--color-white, 0)  !default; // 100% 主标题文字颜色
+$--color-light2: transparentize($--color-white, .15) !default; // 85% 主要文字颜色
+$--color-light3: transparentize($--color-white, .25) !default; // 75% 次要文字颜色
+$--color-light4: transparentize($--color-white, .55) !default; // 45% 禁止颜色
+$--color-light5: transparentize($--color-white, .75) !default; // 25% 边框颜色
+$--color-light6: transparentize($--color-white, .85) !default; // 15% 失效背景色
+$--color-light7: transparentize($--color-white, .92) !default; // 8% 背景颜色01
+
+/* 文字颜色
+-------------------------- */
+$--color-text-dark-maps: generateTextColors(dark);
+$--color-text-light-maps: generateTextColors(white);
+
+$--color-text-title: nth($--color-text-dark-maps, 1) !default;
+$--color-text-primary: nth($--color-text-dark-maps, 2) !default;
+$--color-text-regular: nth($--color-text-dark-maps, 2) !default;
+$--color-text-secondary: nth($--color-text-dark-maps, 3) !default;
+$--color-text-placeholder: nth($--color-text-dark-maps, 4) !default;
+
+/* 边框颜色
+-------------------------- */
+$--border-width-base: 1px !default;
+$--border-style-base: solid !default;
+$--border-color-base: $--color-dark5 !default;
+$--border-color-light: #dfe4ed !default;
+$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
+
+$--input-border: $--border-base !default;
+
+/* 失效颜色
+-------------------------- */
+$--disabled-color-base: nth($--color-text-dark-maps, 3) !default;
+$--disabled-border-base: $--border-color-base !default;
+$--disabled-fill-base: nth($--color-text-dark-maps, 7) !default;
+
+/* 基础色
+-------------------------- */
+$--color-primary: #2288EE !default; // 品牌色
+$--color-danger:  #FC353C !default; // 错误色
+$--color-success: #00CC43 !default; // 成功色
+$--color-warning: #FC9630 !default; // 警告色
+
+/* 新色卡 色阶9%
+-------------------------- */
+$--color-primary-dark-5: build-color($--color-primary, 45%, black) !default;
+$--color-primary-dark-4: build-color($--color-primary, 36%, black) !default;
+$--color-primary-dark-3: build-color($--color-primary, 27%, black) !default;
+$--color-primary-dark-2: build-color($--color-primary, 18%, black) !default;
+$--color-primary-dark-1: build-color($--color-primary, 9%, black) !default;
+$--color-primary-lighter-1: build-color($--color-primary, 9%) !default;
+$--color-primary-lighter-2: build-color($--color-primary, 18%) !default;
+$--color-primary-lighter-3: build-color($--color-primary, 27%) !default;
+$--color-primary-lighter-4: build-color($--color-primary, 36%) !default;
+$--color-primary-lighter-5: build-color($--color-primary, 45%) !default;
+
+$--color-primary-maps: generateColors($--color-primary);
+$--color-success-maps: generateColors($--color-success);
+$--color-warning-maps: generateColors($--color-warning);
+$--color-danger-maps: generateColors($--color-danger);
+
+/* 旧色卡
+-------------------------- */
 $--color-primary-light-10: #E9F0F7 !default;
 $--color-primary-light-9: #CADAEC !default;
 $--color-primary-light-8: #9EBCDD !default;
 $--color-primary-light-7: #6896CA !default;
-$--color-primary-light-6: #296AB4 !default;
+$--color-primary-light-6: $--color-primary !default;
 $--color-primary-light-5: #255DA1 !default;
 $--color-primary-light-4: #204F8D !default;
 $--color-primary-light-3: #1B4179 !default;
@@ -20,7 +91,7 @@ $--color-danger-light-10: #FCEEEB !default;
 $--color-danger-light-9: #F7D5CF !default;
 $--color-danger-light-8: #F1B3A7 !default;
 $--color-danger-light-7: #E98776 !default;
-$--color-danger-light-6: #E0563D !default;
+$--color-danger-light-6: $--color-danger !default;
 $--color-danger-light-5: #CD4A3B !default;
 $--color-danger-light-4: #B93D38 !default;
 $--color-danger-light-3: #A52F36 !default;
@@ -42,7 +113,7 @@ $--color-success-light-10: #EBF7F2 !default;
 $--color-success-light-9: #CEECE0 !default;
 $--color-success-light-8: #A6DDC7 !default;
 $--color-success-light-7: #74CAA7 !default;
-$--color-success-light-6: #3AB483 !default;
+$--color-success-light-6: $--color-success !default;
 $--color-success-light-5: #34A177 !default;
 $--color-success-light-4: #2E8E6B !default;
 $--color-success-light-3: #277A5E !default;
@@ -159,20 +230,18 @@ $--color-gray-light-3: #7A7A7B !default;
 $--color-gray-light-2: #666667 !default;
 $--color-gray-light-1: #515152 !default;
 
-// 颜色定义
-$--color-primary: $--color-primary-light-6 !default;
-$--color-danger: $--color-danger-light-6 !default;
-$--color-success: $--color-success-light-6 !default;
-$--color-warning: $--color-orange-light-6 !default;
+/* 颜色定义
+-------------------------- */
 $--color-info: $--color-gray-light-6 !default;
 
 $--color-dark-gray: $--color-dark-gray-light-6 !default;
 $--color-light-gray: $--color-light-gray-light-6 !default;
 $--color-gray: $--color-gray-light-6 !default;
-$--color-white: white !default;
 
 $background-color-blue: $--color-primary !default;
 $background-color-deep-blue: $--color-primary-light-4 !default;
 $background-color-gray: $--color-gray-light-9 !default;
 $background-color-white: $--color-white !default;
 $border-color: $--color-gray-light-1 !default;
+
+$--tag-background-color: #eaf4fd;

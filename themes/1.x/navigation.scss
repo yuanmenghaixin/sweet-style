@@ -10,7 +10,14 @@
                     margin-right: 8px;
                 }
                 &.el-icon-arrow-down {
-                    margin-top: -6px;
+                    margin-top: -4px;
+                }
+            }
+        }
+        &.el-menu--horizontal {
+            .el-menu-item, .el-submenu .el-submenu__title {
+                i.el-icon-arrow-down {
+                    margin-top: -3px;
                 }
             }
         }
@@ -18,11 +25,17 @@
     .el-menu-item {
         height: 40px;
         line-height: 40px;
+        i {
+            color: $--color-light3;
+        }
     }
     .el-submenu {
         .el-submenu__title {
             height: 40px;
             line-height: 40px;
+            i {
+                color: $--color-light3;
+            }
         }
     }
     &-icon {
@@ -38,6 +51,11 @@
     }
     // 浅色主题
     &.light-theme {
+        .el-submenu, .el-menu-item {
+            i.el-menu-icon, i.el-submenu__icon-arrow {
+                color: nth($--color-text-dark-maps, 3);
+            }
+        }
         .el-menu-item {
             &.is-active, &.is-active:hover {
                 background-color: $--color-primary-light-10;
@@ -274,13 +292,10 @@
 .custom-el-menu-horizontal {
     display: flex;
     flex-direction: row;
-    .logo {
-        display: flex;
-        height: 60px;
-    }
     .el-menu.el-menu--horizontal {
         width: 100%;
-        border-bottom: 1px solid #e6e6e6 !important;
+        border-bottom: 0;
+        // border-bottom: 1px solid #e6e6e6 !important;
     }
 }
 
@@ -294,10 +309,10 @@
         width: 60px;
         height: 60px;
         line-height: 60px;
-        font-size: 30px;
+        font-size: 24px;
         color: $--color-gray-light-4;
         cursor: pointer;
-        border-bottom: 1px solid #e6e6e6;
+        // border-bottom: 1px solid #e6e6e6;
         &:hover {
             color: $--color-gray-light-1;
             background-color: #e6e6e6;
@@ -309,7 +324,7 @@
         line-height: 60px;
         color: $--color-gray-light-4;
         cursor: pointer;
-        border-bottom: 1px solid #e6e6e6;
+        // border-bottom: 1px solid #e6e6e6;
         padding: 0 8px;
         position: relative;
         img {

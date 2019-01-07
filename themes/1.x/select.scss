@@ -39,39 +39,51 @@
             height: 30px;
             font-size: 12px;
         }
+        .el-input__icon {
+            line-height: 30px;
+        }
     }
     .el-input--medium {
         .el-input__inner {
             height: 26px;
+        }
+        .el-input__icon {
+            line-height: 26px;
         }
     }
     .el-input--small {
         .el-input__inner {
             height: 28px;
         }
+        .el-input__icon {
+            line-height: 28px;
+        }
     }
     .el-input--mini {
         .el-input__inner {
             height: 26px;
         }
+        .el-input__icon {
+            line-height: 26px;
+        }
     }
     .el-select__tags {
         .el-tag {
-            background-color: $--color-primary-light-10;
-            color: $--color-gray-light-1;
+            background-color: $--tag-background-color;
+            color: $--color-text-primary;
             .el-tag__close.el-icon-close {
+                font-size: 18px;
                 position: relative;
-                right: -6px;
+                right: -5px;
                 top: -1px;
                 width: 16px;
                 height: 16px;
-                line-height: 16px;
-                font-size: 22px;
-                color: $--color-gray-light-1;
+                line-height: 1;
+                color: #499DF1;
                 text-align: center;
                 vertical-align: middle;
                 border-radius: 0;
-                background-color: $--color-primary-light-10;
+                background-color: transparent;
                 cursor: pointer;
             }
         }

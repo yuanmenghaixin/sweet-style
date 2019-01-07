@@ -19,6 +19,12 @@
 	}
 }
 
+.el-form--inline {
+	.el-form-item {
+		margin-right: 16px;
+	}
+}
+
 .sw-form {
 	&--advanced {
 		.el-select, input, textarea {

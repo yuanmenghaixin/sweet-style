@@ -1,32 +1,123 @@
+@mixin buttonSize($size: default, $is-round: false) {
+    $padding: $--button-padding-vertical $--button-padding-horizontal;
+    $border-radius: $--button-border-radius;
+    $font-size: nth($--arr-sizes, 1);
+
+    @if ($size == large) {
+        $padding: $--button-large-padding-vertical $--button-large-padding-horizontal;
+        $border-radius: $--button-large-border-radius;
+        $font-size: nth($--arr-sizes, 2);
+    } @else if ($size == small) {
+        $padding: $--button-small-padding-vertical $--button-small-padding-horizontal;
+        $border-radius: $--button-small-border-radius;
+        $font-size: nth($--arr-sizes, 1);
+    }
+
+    padding: $padding;
+    @if ($is-round == false) {
+        border-radius: $border-radius;
+    }
+    font-size: $font-size;
+}
+
+@mixin buttonType($type: primary) {
+    $--color-maps: $--color-primary-maps;
+    
+    @if ($type == success) {
+        $--color-maps: $--color-success-maps;
+    }  @else if ($type == warning) {
+        $--color-maps: $--color-warning-maps;
+    } @else if ($type == danger) {
+        $--color-maps: $--color-danger-maps;
+    }
+
+    &.is-plain {
+        background-color: nth($--color-maps, 1);
+        border-color: nth($--color-maps, 2);
+        &:hover {
+            background-color: nth($--color-maps, 11);
+            border-color: nth($--color-maps, 11);
+        }
+    }
+
+    &:hover, &.is-plain:hover {
+        background-color: nth($--color-maps, 9);
+        border-color: nth($--color-maps, 9);
+    }
+
+    &:active, &.is-plain:active {
+        background-color: nth($--color-maps, 12);
+        border-color: nth($--color-maps, 12);
+    }
+}
+
 .el-button {
+    font-size: 12px;
+
     &--default {
         &:hover {
             background-color: inherit;
+            &.el-dropdown__caret-button {
+                border-color: $--color-primary;
+                &:before {
+                    background: $--color-primary;
+                }
+            }
         }
+
         &.el-button--primary {
             &:hover {
                 background-color: $--color-primary-light-7;
             }
         }
     }
+    &--primary {
+        @include buttonType(primary);
+    }
+    &--success {
+        @include buttonType(success);
+    }
+    &--warning {
+        @include buttonType(warning);
+    }
+    &--danger {
+        @include buttonType(danger);
+    }
+
     &.is-disabled {
         border: 1px solid $--color-gray-light-8;
+
         &.el-button--text {
             border-color: transparent;
+
             &:hover,
             &:active,
             &:focus {
                 border-color: transparent;
             }
         }
+
         background-color: white;
         color: $--color-gray-light-7;
+
         &:hover,
         &:active,
         &:focus {
             border: 1px solid $--color-gray-light-8;
             background-color: white;
             color: $--color-gray-light-7;
+        }
+    }
+    &.is-round {
+        @include buttonSize(default, true);
+    }
+
+    &--large {
+        font-size: 14px;
+        @include buttonSize(large);
+
+        &.is-round {
+            @include buttonSize(large);
         }
     }
 }
